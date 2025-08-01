@@ -30,7 +30,7 @@ function showIntersection() {
 
   const intersection = a.filter((item) => b.includes(item));
   document.getElementById("results").textContent =
-    "🔁 Intersection ဖြစ်သော item များ (common items):\n" +
+    "🔁 Intersection item  (common items):\n" +
     (intersection.length ? intersection.join(", ") : "None");
 }
 
@@ -40,7 +40,7 @@ function showUnion() {
 
   const union = [...new Set([...a, ...b])];
   document.getElementById("results").textContent =
-    "➕ Union ဖြစ်သော item များ (all unique items):\n" +
+    "➕ Union item (all unique items):\n" +
     (union.length ? union.join(", ") : "None");
 }
 
@@ -52,9 +52,9 @@ function showUnavailable() {
   const onlyInB = b.filter((item) => !a.includes(item));
 
   document.getElementById("results").textContent =
-    "🚫 ကုန်လှောင်ရုံ A ထဲတွင်သာရှိသော အရာများ (A / B):\n" +
+    "🚫  Items only in A (A / B):\n" +
     (onlyInA.length ? onlyInA.join(", ") : "None") +
-    "\n\n🚫 ကုန်လှောင်ရုံ B ထဲတွင်သာရှိသော အရာများ (B / A):\n" +
+    "\n\n🚫 Items only in B (B / A):\n" +
     (onlyInB.length ? onlyInB.join(", ") : "None");
 }
 function showDisjoint() {
@@ -79,8 +79,8 @@ function showComplement() {
   const complementB = a.filter((item) => !b.includes(item));
 
   document.getElementById("results").textContent =
-    "➖ A ၏ Complement  (B \\ A):\n" +
+    "➖ A's Complement  (B \\ A):\n" +
     (complementA.length ? complementA.join(", ") : "None") +
-    "\n\n➖ B ၏ Complement  (A \\ B):\n" +
+    "\n\n➖ B's Complement  (A \\ B):\n" +
     (complementB.length ? complementB.join(", ") : "None");
 }
