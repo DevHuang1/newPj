@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Warehouse Comparator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧱 Warehouse Inventory Comparator</h1>
+
+      <div class="warehouses">
+        <!-- Warehouse A -->
+        <div class="box">
+          <h2>🏭 ကုန်လှောင်ရုံ A</h2>
+
+          <div class="list-box">
+            <h4>📦 လက်ရှိ Items</h4>
+            <ul id="listA">
+              <li>TV</li>
+
+              <li>Keyboard</li>
+              <li>Monitor</li>
+            </ul>
+          </div>
+
+          <textarea
+            id="warehouseA"
+            placeholder="Add more items (comma separated)"
+          ></textarea>
+          <button onclick="appendItems('warehouseA', 'listA')">
+            ➕ A ထဲသိမ်းမယ်
+          </button>
+        </div>
+
+        <!-- Warehouse B -->
+        <div class="box">
+          <h2>🏭 ကုန်လှောင်ရုံ B</h2>
+
+          <div class="list-box">
+            <h4>📦 လက်ရှိ Items</h4>
+            <ul id="listB">
+              <li>Phone</li>
+              <li>Speaker</li>
+
+              <li>Router</li>
+            </ul>
+          </div>
+
+          <textarea
+            id="warehouseB"
+            placeholder="Add more items (comma separated)"
+          ></textarea>
+          <button onclick="appendItems('warehouseB', 'listB')">
+            ➕ B ထဲသိမ်းမယ်
+          </button>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button onclick="showIntersection()">Intersection ပြပါ</button>
+        <button onclick="showUnion()">Union ပြပါ</button>
+        <button onclick="showUnavailable()">Difference ပြပါ</button>
+        <button onclick="showDisjoint()">Disjoint ပြပါ</button>
+        <button onclick="showComplement()">Complement ပြပါ</button>
+      </div>
+
+      <div class="results-box">
+        <h2>📦 Results</h2>
+        <p id="results">Your output will appear here.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
